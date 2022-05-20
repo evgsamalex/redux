@@ -10,7 +10,6 @@ export const ASYNC_ADD_MANY_CUSTOMERS = "ASYNC_ADD_MANY_CUSTOMERS";
 export const customerReducer = (state = defaultState, action) => {
   switch (action.type) {
     case ADD_MANY_CUSTOMERS:
-      console.log(action);
       return { ...state, customers: [...state.customers, ...action.payload] }
     case ADD_CUSTOMER:
       return { ...state, customers: [...state.customers, action.payload] };
